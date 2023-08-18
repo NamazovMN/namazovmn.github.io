@@ -1,0 +1,161 @@
+main {
+    width: 100%;
+    height: calc(100vh - 60px);
+    /* background-color: #150C39; */
+    background-color: #1A253A;
+    margin-top: 60px;
+    background-image: url(../images/BG2.png), url(../images/BG1.png);
+    background-size: 100vw, cover;
+    background-repeat: no-repeat;
+    background-image: center, center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+main .main-intro h1 {
+    /* margin-top: 40px; */
+    font-size: 20px;
+    line-height: 50px;
+    align-content: center;
+}
+
+
+main p {
+    font-size: 18px;
+    line-height: 30px
+}
+
+main a {
+    font-size: 16px;
+    display: block;
+    background-color: var(--logo-color);
+    padding: 10px 20px;
+    width: fit-content;
+}
+
+main .main-intro {
+    /* position: relative; */
+    /* height: 100vh; */
+    padding-top: 70vh;
+}
+
+/* projects section */
+
+
+.index-projects {
+    width: 100%;
+    padding: 60px 0;
+    /* background-color: antiquewhite; */
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    flex-wrap: wrap;
+
+
+}
+
+.index-projects h1{
+    color: var(--web-color);
+    text-align: center;
+    padding-bottom: 40px;
+    flex-basis: 100%;
+    font-size: 24px;
+
+}
+
+.index-projects-box {
+   width: 300px;
+   height: 300px;
+   background-color: var(--logo-color);
+   background-repeat: no-repeat;
+   background-size: cover;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   margin-bottom: 30px;
+   border-radius: 15px;
+   border: #1A253A;
+}
+
+
+.index-projects-box:nth-child(2) {
+    background-image: url(../images/projects/ner.gif);
+}
+.index-projects-box:nth-child(3) {
+    background-image: url(../images/projects/lid.gif);
+}
+.index-projects-box:nth-child(4) {
+    background-image: url(../images/projects/bio.gif);
+}
+
+.dark-overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.5;
+    transition: all ease-in-out 100ms;
+    border: #1A253A;
+    border-radius: 15px;
+}
+
+.index-projects-box:hover .dark-overlay {
+    opacity: 0;
+}
+
+.index-projects-box h3 {
+   font-size: 24px;
+   line-height: 28px;
+   color: aliceblue;
+   text-align: center;
+   text-shadow: -2px 4px 2px black;
+   z-index: 100;
+}
+
+/*  ABOUT ME  */
+
+.index-about {
+    width: 100%;
+    padding: 60px 0;
+    background-color: var(--web-color);
+    align-items: center;
+}
+
+.index-about-img img{
+    width: 300px;
+    border-radius: 200px;
+}
+
+.index-about-txt {
+    flex-basis: 600px;
+}
+
+.index-about-txt p{
+    padding: 20px 0;
+}
+
+.index-about-txt a{
+    font-size: 16px;
+    display: block;
+    background-color: var(--logo-color);
+    padding: 10px 20px;
+    width: fit-content;
+}
+
+.index-about-txt a:hover{
+    background-color: var(--hover-color);
+}
+
+.index-about-flex{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 60px;
+
+}
