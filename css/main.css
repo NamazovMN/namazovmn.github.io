@@ -1,11 +1,15 @@
 :root{
     --header-text: Outfit-bold;
     --body-text: Outfit-regular;
+    --hero-font: bruno-ace;
     --web-color: #1A253A;
     --logo-color: #1B8C9F;
     --hover-color: #146a79;
 }
 
+html {
+    font-size: 62.5%;
+}
 
 @font-face {
     font-family: Outfit-regular;
@@ -14,6 +18,11 @@
 @font-face {
     font-family: Outfit-bold;
     src: url(../fonts/Outfit/Outfit-Bold.ttf);
+}
+
+@font-face {
+    font-family: bruno-ace;
+    src: url(../fonts/Bruno-Ace/BrunoAce-Regular.ttf);
 }
 
 
@@ -34,29 +43,49 @@ body:after{
     margin: 0 auto;
 }
 
-a {
-    cursor: pointer;
-    font-size: 14px;
+
+
+h1{
+    font-size: 2.6rem;
+    line-height: 1.5;
+    color: white;
+    font-family: var(--header-text);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+h2{
+    font-size: 2.4rem;
+    line-height: 1.5;
+    color: white;
+    font-family: var(--header-text);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+h3{
+    font-size: 2rem;
     line-height: 32px;
+    color: white;
+    font-family: var(--header-text);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+p{
+    font-size: 1.4rem;
+    line-height: 1.75;
     color: white;
     font-family: var(--body-text);
  
 }
 
-h1{
-    font-size: 14px;
-    line-height: 32px;
-    color: white;
-    font-family: var(--header-text);
-    font-weight: 200;
-    text-transform: uppercase;
-}
-
-p{
-    font-size: 14px;
-    line-height: 30px;
+a {
+    font-size: 1.4rem;
+    line-height: 1.75;
     color: white;
     font-family: var(--body-text);
+    cursor: pointer;
  
 }
 
@@ -85,8 +114,6 @@ p{
     color: var(--web-color);
     display: block;
     height: 100%;
-
-
 }
 
 .header-main-logo a:hover{
@@ -104,12 +131,10 @@ p{
     height: 100%;
     background-color: white;
     padding-right: 60px;
-
 }
 
 .header-main-nav ul{
     list-style: none;
-    /* margin-left: 30px; */
 }
 
 .header-main-nav ul li{
@@ -150,7 +175,7 @@ p{
 }
 
 .footer-sitemap a {
-    line-height: 30px;
+    line-height: 1.5;
 }
 
 
