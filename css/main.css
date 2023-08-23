@@ -199,9 +199,71 @@ a {
     
 }
 
+/* MOBILE NAVIGATION */
+.nav-box-phone{
+    width: fit-content;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.nav-phone, .nav-box-phone{
+    display: none;
+}
+
+
 /* MOBILE VERSION */
 
 @media only screen and (max-width: 600px){
+ 
+    .nav-box-phone{
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-image: url(../images/icons/burger-menu.svg), url(../images/icons/close.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center, center left 50px;
+    }
+
+    .nav-phone{
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        z-index: 900;
+        background-color: green;
+
+    }
+
+    .nav-phone ul{
+        width: 100%;
+        height: calc(100vh - 60px);
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+
+    .nav-phone ul li{
+        flex-basis: 100%;
+        border-top: 2px solid black;
+    }
+
+    .nav-phone ul li:last-child{
+        border-bottom: 2px solid black;
+    }
+
+    .nav-phone ul li a{
+        display: block;
+        height: 100%;
+        font-size: 3rem;
+        padding: 30px 0;
+        flex-basis: 100%;
+        text-align: center;
+    }
+
     .wrapper-main {
         width: 80%;
     }
@@ -223,47 +285,36 @@ a {
 
     /* FOOTER */
 
-    .footer-main {
-        width: 100%;
-        padding: 60px 0 100px;
-        background-color: black;
-    }
-
-    .footer-main-flex {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
     .footer-sitemap {
-        flex-basis: 100%;
-        display: flex;
+        flex-wrap: wrap;
     }
 
     .footer-sitemap a {
         line-height: 1.5;
     }
 
-
     .footer-sitemap a:hover{
         opacity: 0.8;
     }
 
     .footer-sitemap ul:nth-child(1) {
-        flex-basis: 180px;
-        border-left: 2px solid var(--logo-color);
-        padding-left: 20px;
+        border-left: none;
+        padding-left: 0;
     }
 
+    .footer-sitemap ul:nth-child(1),
+    .footer-sitemap ul:nth-child(2)
+    {
+        flex-basis: 100%;
+        text-align: center;
+        padding-bottom: 20px;
+    }
     .footer-sitemap ul:nth-child(2) {
         flex-grow: 1;
     }
 
     .footer-sitemap ul:nth-child(2) li {
-        clear: both;
-        float: right;
-        
+        float: none;
     }
-
 
 }
