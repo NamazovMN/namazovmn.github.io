@@ -19,17 +19,20 @@ main h1{
 }
 
 .main-projects-intro{
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     align-items: center;
+    row-gap: 40px;
+    /* padding: 20px 0; */
 }
 
 .main-background{
     width: cover;
-    height: 100%;
+    height: fit-content;
     display: flex;
-    padding: 5vh 0;
+    padding: 0 0;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -83,7 +86,7 @@ main h1{
 
 .main-text{
     width: 100%;
-    padding-bottom: 0vh;
+    /* padding-bottom: 0vh; */
     display: flex;
     align-content:center;
     justify-content: center;
@@ -97,9 +100,152 @@ main h1{
     font-size: 3vh;
     background-color: #111927;
     text-align: center;
-    bottom:0;
     /* flex-basis: 100%; */
 }
+
+/* Projects Section */
+
+.projects-section {
+    width: 100%;
+    /* padding: 60px 0; */
+    padding: 40px 0;
+    background-color: var(--web-color);
+}
+
+.projects-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* row-gap: 30px;     */
+
+}
+
+.dark-overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.5;
+    transition: all ease-in-out 100ms;
+    border: #1A253A;
+    border-radius: 15px;
+}
+
+.project-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    padding: 20px 0;
+
+    border-bottom: 2px solid white;
+}
+
+.project-logo-box {
+    width: 250px;
+    height: 250px;
+    background-color: var(--logo-color);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    position: relative;
+}
+
+.project-logo-box:hover .dark-overlay{
+    opacity: 0.1;
+}
+
+#ner-logo{
+    background-image: url(../images/projects/ner.gif);
+
+}
+
+#lid-logo{
+    background-image: url(../images/projects/lid.gif);
+}
+
+#bio-logo{
+    background-image: url(../images/projects/bio.gif);
+}
+
+.project-info-details{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-info-box{
+    width: 60%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.project-subinfo-box{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.project-subinfo-box p{
+    font-size: 1.6rem;
+    line-height: 1.8;
+    margin-top: 2vh;
+    font-family: var(--body-text);
+    text-align: justify;
+}
+
+.project-subinfo-box a{
+    font-size: 2rem;
+    font-family: var(--body-text);
+}
+
+.project-subinfo-box a:hover{
+    opacity: 0.5;
+}
+
+#more-info-box-lid, #more-info-box-ner, #more-info-box-bio{
+    display: none;
+}
+
+
+
+
+.git-button{
+    display: flex;
+    background-color: var(--logo-color);
+    width: fit-content;
+    border: 3px solid white;
+    border-radius: 10px;
+    align-items: center;
+    margin: auto;
+    /* align-self: center; */
+}
+
+.git-button p{
+    font-size: 2vh;
+    font-family: var(--hero-font);
+    padding: 1vh 2vw;
+    text-align: center;
+    font-weight: 300;
+}
+
+.git-logo{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    margin-right: 10px;
+    background-image: url(../images/icons/github-mark-white.svg);
+    background-position: center;
+    background-size: cover;
+}
+
 
 
 /* Phone version */
@@ -111,14 +257,6 @@ main h1{
         align-items: flex-end;
     }
 
-    .main-projects-intro{
-        display: flex;
-        flex-direction: column;
-        padding: 10vh 0;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-    
     .main-background{
         width: cover;
         height: 100%;
@@ -169,10 +307,71 @@ main h1{
         /* margin-top: 30px; */
         display: block;
         width: 100%;
-        font-size: 2vh;
+        font-size: 2rem;
         text-align: center;
         bottom:0;
         /* flex-basis: 100%; */
     }
+    /* Projects Section */
+
+    .projects-section {
+        width: 100%;
+        /* padding: 60px 0; */
+        padding: 20px 0;
+    }
+
+    .projects-flex{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        /* row-gap: 30px;     */
+
+    }
+
+    .dark-overlay{
+        display: none;
+    }
+
+    .project-box{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+        row-gap: 20px;
+    }
+
+    .project-logo-box {
+        width: 200px;
+        height: 200px;
+    }
+
+    .project-logo-box:hover .dark-overlay{
+        display: none;
+    }
+
+    .project-info-box{
+        width: 90%;
+        justify-content: center;
+        row-gap: 20px;
+        align-items: center;
+    }
+
+    .project-subinfo-box{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-info-box h1{
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .project-subinfo-box a{
+        font-size: 1.8rem;
+        font-family: var(--body-text);
+    }
+
+
 }
 
