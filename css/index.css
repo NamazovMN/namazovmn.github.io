@@ -1,406 +1,936 @@
-/* main {
-    width: 100%;
-    height: calc(100vh - 60px);
-    background-color: #1A253A;
-    margin-top: 60px;
-    background-image: url(../images/BG2.png), url(../images/BG1.png);
-    background-size: 100vw, cover;
-    background-repeat: no-repeat;
-    background-image: center, center;
+main {
     display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--web-color);
+    margin-top: 60px;
     justify-content: center;
     align-items: center;
     z-index: 100;
-} */
+}
 
-main {
+.section-block{
+    display: none;
     width: 100%;
-    height: calc(100vh - 60px);
-    background-color: #1A253A;
-    margin-top: 60px;
-    background-image: url(../images/BG1.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    padding-bottom: 70px;
+}
+
+.section-flex{
+    flex-direction: column;
+    align-content: center;
     justify-content: center;
     align-items: center;
 }
 
-main .main-intro h1 {
-    margin-top: auto;
-    font-size: 9.6rem;
-    line-height: 3.15;
-    align-self: center;
-
-}
-
-main .main-intro h2 {
-    margin-top: auto;
-    font-size: 4.8rem;
-    line-height: 3.8;
-    align-self: center;
-}
-
-main p {
-    font-size: 1.8rem;
-    line-height: 1.5;
-}
-
-main a {
-    font-size: 1.4rem;
-    display: block;
+.button-block{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    border: 5px var(--logo-color) solid;
+    border-radius: 10px;
     background-color: var(--logo-color);
+    align-items: center;
+    margin: auto;
+}
+
+
+.button-block p{
+    font-family: var(--button-text);
+    text-align: center;
+    font-weight: 500;
+}
+
+
+.button-block .logo{
+    background-position: center;
+    background-size: cover;   
+}
+
+.content{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    align-content: center;
+    justify-content: center;
+}
+
+.sub-content{
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.sub-header{
+    font-family: var(--header-text);
+    text-transform: initial;
+}
+
+.info-text{
+    font-family: var(--body-text);
+    text-transform: initial;
+    text-align: justify;
+}
+
+.less-more{
+    font-family: var(--body-text);
+}
+
+.button-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: fit-content;
+    width: 100%;
+}
+
+.logo-content{
+    background-position: center;
+    background-size: cover;
+}
+
+.logo{
+    background-size: cover;
+    background-position: center;
+    border: 3px var(--text-color) solid;
+}
+
+#main-section{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#home-content{
+    height: 90%;
+    align-items: center;
+}
+
+#main-container{
+    width: 100%;
+}
+
+#about-container, #project-container{
+    background-color: var(--navigation-color);
+    border-radius: 20px;
+}
+
+#lid-content, #ner-content{
+    border-bottom: 3px var(--text-color) solid;
+}
+
+#lid-left-side, #ner-left-side, #bio-left-side{
     width: fit-content;
 }
 
-main a:hover{
-    background-color: var(--hover-color)
+
+#about-more-info, #lid-more-info, #ner-more-info, #bio-more-info{
+    display: none;
 }
 
-.main-intro{
-    width: cover;
-    height: 90vh;
-    padding-top: 10vh;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-}
-
-.main-intro .main-column{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: space-between;
-
-}
-
-
-
-.main-column a{
-    font-size: 1.5vw;
-    padding: 10px 20px;
-    margin-bottom: 3vh;
-    z-index: 30;
-}
-
-.main-column p{
-    margin-top: 50vh;
-    align-self: center;
+#about-header, #projects-header, #about-header-second{
     font-family: var(--hero-font);
-    font-size: 1.2vw;
-    z-index: 3;
-    /* top: 30vh; */
+    border-bottom: 5px var(--button-hover-color) solid;
 }
 
-.main-intro .main-column-side{
-    width: 25%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+/* #about-header-second{
+    display: none;
+} */
+
+#N::first-letter, #L::first-letter, #P::first-letter{
+    color: var(--logo-color);
 }
 
-.main-intro .main-column-side .main-sub-info{
-    display: block;
-    width: 40vh;
-    height: 40vh;
-    border-radius: 40vh;
-    background-image: url(../images/circles.svg);
-    background-size: cover;
-    text-align: center;
-    justify-content: center;
-    z-index: 10;
-}
-
-.main-column-side .main-sub-info h2{
-    font-size: 4vw;
-    line-height: 40vh;
-    color: white;
-    font-family: var(--hero-font);
-    font-weight: 1000;
-}
-
-.main-sub-info h2:hover{
-    color:var(--hover-color);
-}
-
-.center-info{
-    /* align-self: center; */
-    display: flex;
-    width: cover;
-    height: fit-content;
-    justify-content: center;
-    /* position:absolute; */
-    position: relative;
-    bottom: 80vh;
-    cursor: pointer;
-
-}
-
-.center-info .main-info{
-    align-self: center;
-    display: block;
-    width: 80vh;
-    height: 80vh;
-    background-image: url(../images/circles.svg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: center;
-    justify-content: center;
-}
-
-.center-info .main-info h1{
-    font-size: 10vw;
-    line-height: 80vh;
-    color: white;
-    font-family: var(--hero-font);
-    font-weight: 1000;
-
-}
-
-.center-info h1:hover{
-    color: var(--hover-color)
+#intro-box{
+    border: 10px var(--logo-color) solid;
+    background-color: var(--web-color);
+    border-radius: 20px;
 }
 
 
+/* Button Logos */
 
-/* projects section */
-
-
-.index-projects {
-    width: 100%;
-    padding: 60px 0;
-    /* background-color: antiquewhite; */
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    column-gap: 20px;
-    flex-wrap: wrap;
+#git-logo{
+    background-image: url(../images/icons/github-mark-white.svg);
+    /* background-color: var; */
 }
 
-.index-projects h1{
-    color: var(--web-color);
-    text-align: center;
-    padding-bottom: 40px;
-    flex-basis: 100%;
-    font-size: 2.4rem;
+#lm-logo{
+    background-image: url(../images/icons/arrow-white.svg);
 }
 
-.index-projects-box {
-   width: 300px;
-   height: 300px;
-   background-color: var(--logo-color);
-   background-repeat: no-repeat;
-   background-size: cover;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   position: relative;
-   margin-bottom: 30px;
-   border-radius: 15px;
-   border: #1A253A;
+#cv-logo{
+    background-image: url(../images/icons/download.svg)
 }
 
+#in-logo{
+    background-image: url(../images/icons/linkedin.svg)
+}
 
-.index-projects-box:nth-child(2) {
+/* Project covers */
+#ner-logo{
     background-image: url(../images/projects/ner.gif);
 }
-.index-projects-box:nth-child(3) {
+
+#lid-logo{
     background-image: url(../images/projects/lid.gif);
 }
-.index-projects-box:nth-child(4) {
+
+#bio-logo{
     background-image: url(../images/projects/bio.gif);
 }
 
-.dark-overlay{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: black;
-    opacity: 0.5;
-    transition: all ease-in-out 100ms;
-    border: #1A253A;
-    border-radius: 15px;
-}
-
-.index-projects-box:hover .dark-overlay {
-    opacity: 0;
-}
-
-.index-projects-box h3 {
-   font-size: 2.4rem;
-   line-height: 1.5;
-   color: aliceblue;
-   text-align: center;
-   bottom: 0;
-   text-shadow: -2px 4px 2px black;
-   z-index: 100;
-}
-
-/*  ABOUT ME  */
-
-.index-about {
-    width: 100%;
-    padding: 60px 0;
-    background-color: var(--web-color);
-    align-items: center;
-}
-
-.index-about-img img{
-    width: 300px;
+/* Portrait */
+#portrait{
+    background-image: url(../images/portraits/portrait.jpg);
+    width: 200px;
+    height: 200px;
     border-radius: 200px;
+    padding: auto;
 }
 
-.index-about-txt {
-    flex-basis: 600px;
-}
+@media only screen and (max-width: 600px){
 
-.index-about-txt p{
-    padding: 20px 0;
-}
-
-.index-about-txt a{
-    font-size: 1.5rem;
-    display: block;
-    background-color: var(--logo-color);
-    padding: 10px 20px;
-    width: fit-content;
-}
-
-.index-about-txt a:hover{
-    background-color: var(--hover-color);
-}
-
-.index-about-flex{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    column-gap: 60px;
-
-}
-
-@media only screen and (max-width: 600px) {
-    
-    main{
-        align-items: flex-end;
+    .info-text{
+        font-size: 1.4rem;
+        padding: 0 10px;
     }
 
-    .main-intro .main-column{
-        width: 100%;
+    .less-more{
+        font-size: 1.4rem;
+        padding: 0 10px;
+    }
+
+    #main-section{
+        display: flex;
+        flex-direction: column;
+        background-image: url("../images/BG2.svg");
+        height: calc(100vh - 60px);
+    }
+
+    #main-container{
         height: 100%;
+        display: flex;
+        justify-content: space-evenly;
     }
 
-    .main-intro .main-column p{
-        /* margin-top: 50vh; */
-        align-self: center;
-        font-family: var(--hero-font);
-        font-size: 5vw;
-        z-index: 3;
-        text-align: center;
-        /* top: 30vh; */
+    .button-block p{
+        font-size: 1.6rem;
+        padding: 3px 10px;
     }
 
-    .main-column a{
-        font-size: 3.5vw;
-        margin-bottom: 5vh;
-        z-index: 30;
+    .button-block .logo{
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        margin-right: 10px;
     }
 
-    .main-intro .main-column-side{
+    #home-left-side{
         display: none;
     }
 
-
-
-    .center-info .main-info{
-        width: 70vh;
-        height: 70vh;
-        margin: auto;
-    }
-
-    .center-info .main-info h1{
-        font-size: 15vw;
-        line-height: 70vh;
-        color: white;
-        font-family: var(--hero-font);
-        font-weight: 1000;
-    }
-
-/* projects section */
-
-
-    .index-projects {
+    #home-right-side{
         width: 100%;
-        padding: 40px 0 20px;
-        /* background-color: antiquewhite; */
-        row-gap: 20px;
-    }
-
-    .index-projects h1{
-        padding-bottom: 20px;
-    }
-
-    .dark-overlay{
-        opacity: 0.3;
-    }
-
-    .index-projects-box h3 {
-        font-size: 1.8rem;
-        line-height: 1;
-        margin-top: 80%;
-
-    }
-
-    /*  ABOUT ME  */
-
-    .index-about {
-        width: 100%;
-        padding: 60px 0;
-        background-color: var(--web-color);
+        padding: 0 40px;
         align-items: center;
     }
 
-    .index-about-img{
+    #intro-box{
+        width: fit-content;
+    }
+
+    #N, #L, #P{
+        text-align: start;
+        font-size: 4.8rem;
+        padding: 5px 20px;
+    }
+
+    #slogan{
+        text-align: center;
+        padding: 40px 0;
+        font-size: 1.8rem;
+    }
+
+    /* <============== Projects ==============> */
+
+    .wrapper-main{
+        width: 80%;
+    }
+    #projects-section{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        padding-top: 70px;
+    }
+
+    #projects-title, #about-title{
+        padding: 10px 0;
+    }
+    #lid-content, #ner-content, #bio-content{
+        flex-direction: column;
+        padding: 10px 0;
+        row-gap: 10px;
+    }
+
+    #lid-logo, #ner-logo, #bio-logo{
+        width: 250px;
+        height: 250px;
+        border-radius: 10px;
+    }
+
+    #lid-left-side, #ner-left-side, #bio-left-side{
+        align-items: center;
         width: 100%;
+    }
+
+    #lid-more-info, #ner-more-info, #bio-more-info, #about-more-info{
+        row-gap:10px;
+    }
+
+    #lid-title, #ner-title, #bio-title{
+        text-align: center;
+    }
+
+    #lid-right-side, #ner-right-side, #bio-right-side{
+        row-gap: 10px;
+        padding: 0 10px;
+    }
+
+    /* <============== About ==============> */
+
+    #about-section{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        padding-top: 70px;
+    }
+
+    #about-content{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #about-right-side{
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+    }
+    
+    #about-left-side{
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        row-gap: 10px;
+    }
+
+    #about-title-second{
+        display: none;
+    }
+
+    #about-buttons{
+        padding: 10px 0;
+    }
+
+    #contacts-section{
+        display: flex;
+    }
+
+}
+
+@media only screen and (min-width: 601px){
+
+    .info-text{
+        padding-right: 10px;
+        font-size: 1.6rem;
+        row-gap: 5px;
+    }
+
+    .less-more{
+        font-size: 1.6rem;
+    }
+
+    #main-section{
+        display: flex;
+        flex-direction: column;
+        background-image: url("../images/BG2.svg");
+        height: calc(100vh - 60px);
+    }
+
+    #main-container{
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .button-block p{
+        font-size: 1.6rem;
+        padding: 5px 10px;
+    }
+
+    .button-block .logo{
+        width: 35px;
+        height: 35px;
+        border-radius: 30px;
+        margin-right: 10px;
+    }
+
+    #home-left-side{
+        display: none;
+    }
+
+    #home-right-side{
+        width: 100%;
+        padding: 0 100px;
+        align-items: center;
+    }
+
+    #intro-box{
+        width: fit-content;
+    }
+
+    #N, #L, #P{
+        text-align: start;
+        font-size: 7rem;
+        padding: 5px 60px;
+    }
+
+    #slogan{
+        text-align: center;
+        padding: 40px 0;
+        font-size: 3rem;
+    }
+
+    /* <============== Projects ==============> */
+
+    .wrapper-main{
+        width: 90%;
+    }
+    #projects-section{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        padding-top: 70px;
+
+    }
+
+    #projects-title, #about-title-second{
+        padding: 10px 0;
+    }
+    #lid-content, #ner-content, #bio-content{
+        flex-direction: row;
+        padding: 10px 0;
+        row-gap: 10px;
+    }
+
+    #lid-logo, #ner-logo, #bio-logo{
+        width: 175px;
+        height: 175px;
+        border-radius: 10px;
+    }
+
+    #lid-left-side, #ner-left-side, #bio-left-side{
+        align-items: center;
+        width: fit-content;
+        padding: 10px 10px;
+    }
+
+    #lid-right-side, #ner-right-side, #bio-right-side{
+        row-gap: 10px;
+        padding: 10px 10px;
+    }
+
+    #lid-title, #ner-title, #bio-title{
+        font-size: 2.2rem;
+        text-align: start;
+        padding-left: 5px
+
+    }
+
+    #lid-more-info, #ner-more-info, #bio-more-info, #about-more-info{
+        row-gap: 10px;
+    }
+
+
+    /* <============== About ==============> */
+
+    #about-section{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        padding-top: 70px;
+        margin-bottom: 70px;
+    }
+
+    #about-content{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #about-title{
+        display: none;
+    }
+    #about-right-side{
+        padding: 20px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #about-title-second{
+        width: 60%; 
+    }
+
+    #portrait{
+        height: 175px;
+        width: 175px;
         border-radius: 200px;
     }
-
-    .index-about-txt {
-        flex-basis: 100%;
-        /* align-items: center; */
-
-    }
-    .index-about h1{
-        text-align: center;
+    
+    #about-left-side{
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        row-gap: 10px;
     }
 
-    .index-about-txt p{
+    #about-buttons{
+        padding: 10px 50px;
+    }
+
+    #contacts-section{
+        display: flex;
+        padding-bottom: 0px;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .info-text{
+        row-gap: 10px;
+    }
+
+    #main-section{
+        display: flex;
+        flex-direction: column;
+        background-image: url("../images/BG2.svg");
+        height: calc(100vh - 60px);
+    }
+
+    #main-container{
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #home-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .button-block p{
+        font-size: 1.6rem;
+        padding: 5px 10px;
+    }
+
+    .button-block .logo{
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        margin-right: 10px;
+    }
+
+    #home-left-side{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        align-content: center;
+    }
+
+    #author-box{
+        width: fit-content;
+        align-items: center;
+    }
+
+    #page-intro{
+        font-size: 2.4rem;
+    }
+
+    #author-info{
+        font-size: 3rem;
+    }
+
+    #home-right-side{
+        width: 100%;
+        padding: 0 100px;
+        align-items: center;
+    }
+
+    #intro-box{
+        width: fit-content;
+    }
+
+    #N, #L, #P{
+        text-align: start;
+        font-size: 7rem;
+        padding: 5px 60px;
+    }
+
+    #slogan{
         text-align: center;
+        padding: 40px 0;
+        font-size: 3rem;
+    }
+    /* <============== Projects ==============> */
+
+    .wrapper-main{
+        width: 90%;
+    }
+    #projects-section{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    #projects-title, #about-title{
+        padding: 10px 0;
+    }
+    #lid-content, #ner-content, #bio-content{
+        flex-direction: row;
+        padding: 10px 0;
+        row-gap: 10px;
+    }
+
+    #lid-logo, #ner-logo, #bio-logo{
+        width: 175px;
+        height: 175px;
+        border-radius: 10px;
+    }
+
+    #lid-left-side, #ner-left-side, #bio-left-side{
+        align-items: center;
+        width: fit-content;
+        padding: 10px 0px;
+        padding-left: 30px;
+    }
+
+    #lid-right-side, #ner-right-side, #bio-right-side{
+        row-gap: 10px;
+        padding: 10px 30px;
+    }
+
+    #lid-title, #ner-title, #bio-title{
+        font-size: 2.4rem;
+        text-align: start;
+        padding-left: 5px
+
+    }
+
+    #lid-git p, #ner-git p, #bio-git p, #cv p, #linkedin p{
+        font-size: 1.6rem;
+    }
+
+/* <============== About ==============> */
+
+    #about-section{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    #about-content{
+        display: flex;
+        flex-direction: row;
+    }
+    #about-title{
+        display: flex;
+    }
+    #about-title-second{
+        display: none;
+    }
+    #about-right-side{
+        padding: 30px 30px;
+        display: flex;
+        width: fit-content;
+    }
+
+    #portrait{
+        height: 175px;
+        width: 175px;
+        border-radius: 175px;
+    }
+    
+    #about-left-side{
+        display: flex;
+        align-items: center;
+        padding: 10px 0px;
+        padding-left: 30px;
+        row-gap: 10px;
+    }
+
+    #about-buttons{
+        padding: 10px 50px;
+    }
+
+}
+
+
+@media only screen and (min-width: 992px){
+
+    .less-more:hover{
+        opacity: 0.5;
+    }
+
+    #main-section{
+        display: flex;
+        flex-direction: column;
+        background-image: url("../images/BG1.svg");
+        height: calc(100vh - 60px);
+    }
+
+    #main-container{
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #home-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0 30px;
+    }
+
+    #home-left-side{
+        display: flex;
+        height: 100%;
+        width: 40%;
+    }
+    #author-box{
+        display: flex;
+        width: 100%;
+        padding: 0 50px;
+    }
+    #page-intro{
+        width: 100%;
+        font-size: 2rem;
+        text-align: center;
+    }
+    #author-info{
+        width: 100%;
+        font-size: 2.4rem;
+        text-align: center;
+    }
+    #home-right-side{
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        width: 60%;
+    }
+
+    #intro-box{
+        width: fit-content;
+        padding: 0px 0px;
+        margin: 0 0;
+    }
+
+    #N, #L, #P {
+        font-size: 7.2rem;
+        padding: 5px 60px;
+    }
+
+    #slogan{
+        padding: 10px 0;
+        font-size: 2rem;
+    }
+    /* <============== Projects ==============> */
+
+    .wrapper-main{
+        width: 90%;
+    }
+
+    #about-title, #projects-title{
         padding: 20px 0;
     }
-
-    .index-about-txt a{
-        font-size: 3.5vw;
-        margin: 0 auto;
+    #lid-content, #ner-content, #bio-content{
+        flex-direction: row;
+        padding: 10px 0;
+        row-gap: 10px;
     }
 
-    .index-about-txt a:hover{
-        background-color: var(--hover-color);
+    #lid-logo, #ner-logo, #bio-logo{
+        width: 225px;
+        height: 225px;
+        border-radius: 20px;
     }
 
-    .index-about-flex{
+    #lid-left-side, #ner-left-side, #bio-left-side{
+        padding: 10px 20px;
+    }
 
-        flex-direction: column-reverse;
+    #lid-right-side, #ner-right-side, #bio-right-side{
+        row-gap: 10px;
+        padding: 10px 0px;
+        padding-right: 40px;
+    }
+
+    #lid-title, #ner-title, #bio-title{
+        padding-left: 0;
+    }
+
+    /* <============== About ==============> */
+
+    #about-content{
         display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        row-gap: 30px;
+        flex-direction: row;
+    }
+    
+    #about-right-side{
+        padding: 30px 0px;
+        padding-right: 40px;
+        display: flex;
+        width: fit-content;
+    }
+
+    #portrait{
+        height: 200px;
+        width: 200px;
+        border-radius: 200px;
+    }
+    
+    #about-left-side{
+        padding: 10px 20px;
+        row-gap: 10px;
+    }
+
+}
+@media only screen and (min-width: 1200px){
+    .info-text{
+        font-size: 1.8rem;
+    }
+
+    .less-more{
+        font-size: 1.8rem;
+    }
+
+    #main-container{
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #home-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 0 100px;
+    }
+
+    #home-left-side{
+        width: 30%;
+        padding: 0 20px;
+    }
+    #author-box{
+        display: flex;
+        width: 100%;
+        padding: 0 0;
+        margin-right: 70px;
+        margin-left: 70px;
 
     }
+    #page-intro{
+        width: 100%;
+        font-size: 2.2rem;
+        text-align: center;
+        /* padding-left: 100px; */
+        
+    }
+    #author-info{
+        width: 100%;
+        font-size: 3.2rem;
+        text-align: center;
+    }
+    #home-right-side{
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        width: 70%;
+    }
+
+    #intro-box{
+        width: fit-content;
+        padding: 0px 0px;
+        margin: 0 0;
+    }
+
+    #N, #L, #P {
+        font-size: 9.6rem;
+        padding: 5px 80px;
+    }
+
+    #slogan{
+        padding: 10px 0;
+        font-size: 3.6rem;
+    }
+
+    .button-block p{
+        font-size: 1.8rem;
+        padding: 5px 20px;
+    }
+
+    .button-block .logo{
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        margin-right: 20px;
+
+    }
+    /* <============== Projects ==============> */
+
+    .wrapper-main{
+        width: 70%;
+    }
+
+    #lid-logo, #ner-logo, #bio-logo{
+        width: 250px;
+        height: 250px;
+    }
+
+    #lid-left-side, #ner-left-side, #bio-left-side{
+        padding: 10px 40px;
+    }
+
+    #lid-right-side, #ner-right-side, #bio-right-side{
+        row-gap: 20px;
+        padding-right: 50px;
+    }
+
+    #lid-title, #ner-title, #bio-title{
+        font-size: 3rem;
+    }
+
+    /* <============== About ==============> */
+
+    #about-right-side{
+        padding-right: 50px;
+        display: flex;
+        width: fit-content;
+    }
+
+    #portrait{
+        height: 250px;
+        width: 250px;
+        border-radius: 250px;
+    }
+    
+    #about-left-side{
+        padding: 10px 40px;
+        row-gap: 10px;
+    }
+   
+
 }

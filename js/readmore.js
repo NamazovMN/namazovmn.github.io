@@ -4,17 +4,16 @@ function getItem(itemId){
 
 function getElements(projectName){
     return {
-        moreButton: getItem("read-more-" + projectName),
-        lessButton: getItem("read-less-" + projectName),
-        moreInfo: getItem("more-info-box-" +projectName ),
-        lessInfo: getItem("less-info-box-" + projectName)
+        moreButton: getItem(projectName + "-more-btn"),
+        lessButton: getItem(projectName + "-less-btn"),
+        moreInfo: getItem(projectName + "-more-info" ),
+        lessInfo: getItem(projectName + "-less-info")
     }
 
 }
 
 function callRead(projectName) {
     let elements = getElements(projectName)
-    console.log(elements)
     elements.moreButton.onclick = function() {
         elements.lessInfo.style.display = "none";
         elements.moreInfo.style.display = "flex";
@@ -30,3 +29,4 @@ function callRead(projectName) {
 callRead('lid')
 callRead('ner')
 callRead('bio')
+callRead('about')

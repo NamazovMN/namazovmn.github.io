@@ -1,0 +1,314 @@
+@import "main.css";
+@import "index.css";
+
+@media only screen and (max-width: 600px) {
+    main {
+        align-items: flex-end;
+    }
+
+    /* .section-block {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } */
+
+    #main {
+        justify-content: center;
+        flex-direction: column;
+        background-image: url(../images/BG1.svg);
+        background-position: center;
+        background-repeat: repeat;
+        background-size: contain;
+        height: calc(100vh - 60px)
+    }
+
+
+
+    #left-box {
+        width: 40%;
+        /* justify-content: start; */
+    }
+
+    .main-block {
+        padding: auto;
+        width: 100%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        /* margin: 0 auto; */
+    }
+
+    /* #web-text{
+        display: none;
+    } */
+
+
+
+    #web-text h1 {
+        padding: 5px 10px;
+        font-size: 6rem;
+    }
+
+    #right-box p {
+        padding: 20px 0;
+        text-align: center;
+        font-size: 2rem;
+        text-transform: initial;
+    }
+
+    .side-block .text-block h1::first-letter {
+        color: var(--logo-color)
+    }
+    #left-box{
+        display: none;
+    }
+
+
+
+
+
+    .button-block p {
+        font-size: 1.6rem;
+    }
+
+    .button-block .logo {
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+    }
+
+    #learn-more {
+        background-image: url(../images/icons/arrow-white.svg);
+    }
+
+    main .button-block:hover {
+        background-color: var(--hover-color);
+        border-color: var(--hover-color);
+    }
+
+
+
+    /* projects section */
+
+    #projects {
+        width: 100%;
+        padding: 40px 0;
+        /* background-color: var(--web-color); */
+    }
+
+    .projects-section .button-block:hover {
+        background-color: var(--hover-color);
+        border-color: var(--hover-color);
+    }
+
+    .projects-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        border-radius: 20px;
+        background-color: var(--navigation-color);
+        padding: 20px 0;
+    }
+
+    .dark-overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: black;
+        opacity: 0.5;
+        transition: all ease-in-out 100ms;
+        border: #1A253A;
+        border-radius: 15px;
+    }
+
+    .section-intro {
+        border-bottom: 5px var(--button-hover-color) solid;
+        /* border-radius: 20px; */
+        padding: 20px 0;
+        height: fit-content;
+        align-self: center;
+    }
+
+    .section-intro h2 {
+        padding: 0 60px;
+        font-size: 3rem;
+        font-family: var(--hero-font);
+        color: var(--button-hover-color)
+    }
+
+    .project-box {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-content: center;
+        padding: 20px 0;
+        border-bottom: 2px solid white;
+    }
+
+    .project-logo-box {
+        width: 250px;
+        height: 250px;
+        background-color: var(--logo-color);
+        background-position: center;
+        background-size: cover;
+        border-radius: 20px;
+        position: relative;
+    }
+
+    .project-logo-box:hover .dark-overlay {
+        opacity: 0.1;
+    }
+
+    #ner-logo {
+        background-image: url(../images/projects/ner.gif);
+
+    }
+
+    #lid-logo {
+        background-image: url(../images/projects/lid.gif);
+    }
+
+    #bio-logo {
+        background-image: url(../images/projects/bio.gif);
+    }
+
+    .info-box {
+        width: 60%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .project-info-details {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-info-details h1 {
+        text-transform: initial;
+    }
+
+    .subinfo-box {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .subinfo-box p {
+        font-size: 1.6rem;
+        line-height: 1.8;
+        margin-top: 2vh;
+        font-family: var(--body-text);
+        text-align: justify;
+    }
+
+    .subinfo-box a {
+        font-size: 2rem;
+        font-family: var(--body-text);
+    }
+
+    .subinfo-box a:hover {
+        opacity: 0.5;
+    }
+
+    #more-info-box-lid,
+    #more-info-box-ner,
+    #more-info-box-bio {
+        display: none;
+    }
+
+    #git-logo {
+        background-image: url(../images/icons/github-mark-white.svg);
+    }
+
+
+
+    /*  ABOUT ME  */
+
+    #about {
+        padding-top: 40px;
+        padding-bottom: 100px;
+    }
+
+    .about-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        column-gap: 60px;
+        background-color: var(--logo-color);
+        padding: 20px 0;
+        border-radius: 20px;
+
+    }
+
+    .details-box {
+        display: flex;
+        justify-content: space-evenly;
+        /* align-items: center; */
+        align-content: center;
+    }
+
+    .details-box .image-about {
+        width: 200px;
+        height: 200px;
+        border-radius: 200px;
+        margin-top: 100px;
+        border: 1px white solid;
+        background-image: url(../images/portraits/portrait.jpg);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+
+    .double-buttons-block {
+        display: flex;
+        width: 50%;
+        margin-left: 20%;
+        align-self: flex-start;
+        display: flex;
+        align-content: center;
+    }
+
+    #more-info-box-about {
+        display: none;
+    }
+
+    .index-about .button-block:hover {
+        background-color: var(--hover-color);
+        border-color: var(--hover-color);
+    }
+
+    #download-logo {
+        background-position: center;
+        border: 3px var(--text-color) solid;
+        /* border-radius: 10px; */
+        background-image: url(../images/icons/download.svg);
+    }
+
+    #linkedin-logo {
+        background-position: center;
+        border: 3px antiquewhite solid;
+        background-image: url(../images/icons/linkedin.svg);
+    }
+
+    #cv-block {
+        display: flex;
+        padding: 0 0;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
