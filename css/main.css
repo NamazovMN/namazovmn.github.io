@@ -298,7 +298,7 @@ a {
     border-bottom: 2px solid var(--hover-color);
 }
 
-.nav-phone-menu ul li a{
+.burger-element{
     display: block;
     height: 100%;
     font-size: 3rem;
@@ -307,7 +307,7 @@ a {
     flex-basis: 100%;
     text-align: center;
 }
-.nav-phone-menu, .nav-box-phone, .nav-box-phone-btn{
+.nav-phone-menu, .nav-box-phone{
     display: none;
 }
 
